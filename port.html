@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software | Cybersecurity Enthusiast & Software Engineer</title>
+    <meta name="description" content="EMAD MUSTAFA HAMAD - Cybersecurity Enthusiast | SOC Analyst Path | Software Engineering Student">
+    <meta name="keywords" content="cybersecurity, SOC analyst, software engineering, Wazuh, Splunk, Linux, networking, threat hunting">
+    <meta property="og:title" content="Software | Cybersecurity Portfolio">
+    <meta property="og:description" content="Professional portfolio of EMAD MUSTAFA HAMAD - Cybersecurity Enthusiast and Software Engineering Student">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0ea5e9",  // cyan-500
+                        secondary: "#8b5cf6", // purple-500
+                        accent: "#06b6d4",   // cyan-400
+                        dark: "#020617",     // slate-950
+                        darker: "#010712",
+                        glass: "rgba(2, 6, 23, 0.7)",
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace']
+                    },
+                    animation: {
+                        'text-gradient': 'text-gradient 3s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        'text-gradient': {
+                            '0%, 100%': { 'background-position': '0% 50%' },
+                            '50%': { 'background-position': '100% 50%' },
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'fadeIn': {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        'fadeInText': {
+                            '0%': { opacity: '0', filter: 'blur(5px)' },
+                            '100%': { opacity: '1', filter: 'blur(0px)' },
+                        },
+                        'slideInUp': {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        'slideInDown': {
+                            '0%': { opacity: '0', transform: 'translateY(-40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        'slideInLeft': {
+                            '0%': { opacity: '0', transform: 'translateX(-50px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        'slideInRight': {
+                            '0%': { opacity: '0', transform: 'translateX(50px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        'zoomIn': {
+                            '0%': { opacity: '0', transform: 'scale(0.85)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                        'scaleUp': {
+                            '0%': { transform: 'scale(0.9)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        'popIn': {
+                            '0%': { transform: 'scale(0.5)', opacity: '0' },
+                            '50%': { transform: 'scale(1.1)' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        'floatUp': {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        'shimmer': {
+                            '0%': { backgroundPosition: '0% 0%' },
+                            '100%': { backgroundPosition: '100% 0%' },
+                        }
+                    },
+                    animation: {
+                        'fadeIn': 'fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+                        'fadeInText': 'fadeInText 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+                        'slideInUp': 'slideInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+                        'slideInDown': 'slideInDown 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+                        'slideInLeft': 'slideInLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+                        'slideInRight': 'slideInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+                        'zoomIn': 'zoomIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+                        'scaleUp': 'scaleUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+                        'popIn': 'popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+                        'floatUp': 'floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        
+        .glass-card {
+            background: rgba(2, 6, 23, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #0ea5e9, #8b5cf6, #06b6d4);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: text-gradient 3s ease infinite;
+        }
+        
+        .skill-bar {
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .skill-progress {
+            height: 100%;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #0ea5e9, #8b5cf6);
+            transition: width 1.5s ease-out;
+        }
+        
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+        }
+        
+        .counter {
+            transition: all 0.5s ease-out;
+        }
+        
+        /* Global Section Animations */
+        section {
+            animation: fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        /* Heading Animations */
+        h1, h2, h3 {
+            animation: fadeInText 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+        
+        h1 {
+            animation-delay: 0.1s;
+        }
+        
+        h2 {
+            animation-delay: 0s;
+        }
+        
+        h3 {
+            animation-delay: 0.2s;
+        }
+        
+        /* Paragraph and Text Animations */
+        p {
+            animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            animation-delay: 0.3s;
+        }
+        
+        li {
+            animation: slideInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        
+        /* Animation utilities */
+        .animate-on-scroll {
+            animation: slideInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        
+        .skill-bar {
+            animation: slideInLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        
+        .skill-progress {
+            animation: scaleUp 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        
+        .glass-card {
+            animation: slideInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .glass-card:hover {
+            animation: none;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.4);
+        }
+        
+        .project-card {
+            animation: zoomIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(14, 165, 233, 0.5);
+        }
+        
+        .timeline-item {
+            animation: slideInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        
+        .journey-item {
+            animation: slideInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        
+        .stat-card {
+            animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        
+        img {
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        
+        img:hover {
+            transform: scale(1.08);
+            filter: brightness(1.1);
+        }
+        
+        /* Button animations */
+        button, a[href="#contact"], input, textarea {
+            animation: fadeInText 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+        
+        button:hover, a[href="#contact"]:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.4);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        /* Course Card Premium Styling */
+        .glass-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .glass-card:hover::before {
+            left: 100%;
+        }
+        
+        /* Course Card Group Hover Float Effect */
+        .group {
+            position: relative;
+        }
+        
+        .group:hover {
+            transform: translateY(-8px);
+        }
+        
+        /* Floating animation for cards */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .glass-card {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Navbar animations */
+        nav {
+            animation: slideInDown 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        
+        /* Hero section cinematic entrance */
+        .hero-content {
+            animation: slideInUp 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <header class="fixed w-full z-40">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center glass-card rounded-full px-6 py-3">
+                <a href="#home" class="text-xl font-bold gradient-text">EMAD</a>
+                <ul id="nav-list" class="hidden md:flex space-x-8"></ul>
+                <button id="mobile-menu-button" class="md:hidden text-primary">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden glass-card rounded-lg mt-2 p-4">
+                <ul id="mobile-nav-list" class="space-y-3"></ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 hero-content">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0" style="animation: slideInLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1);">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4" style="animation: fadeInText 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s both;">Hi, I'm <span class="gradient-text">EMAD MUSTAFA HAMAD</span></h1>
+                    <div class="text-2xl md:text-3xl font-semibold mb-6" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;">
+                        <span id="typing-text" class="gradient-text"></span>
+                    </div>
+                    <p class="text-slate-300 mb-8 max-w-lg" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both;">
+                        Building secure systems and defending digital frontiers through cybersecurity and software engineering.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-primary hover:bg-cyan-600 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105" style="animation: slideInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s both;">
+                            Contact Me
+                        </a>
+                        <button class="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105" style="animation: slideInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.7s both;">
+                            Download CV
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center" style="animation: slideInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1);">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20 relative" style="animation: zoomIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;">
+                            <img src="2.jpg" alt="EMAD MUSTAFA HAMAD" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -inset-4 rounded-full border-4 border-primary/10 animate-pulse-slow pointer-events-none"></div>
+                        <div class="absolute -inset-8 rounded-full border-4 border-secondary/5 animate-pulse-slow pointer-events-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-2 gradient-text text-center" style="animation: slideInDown 1s cubic-bezier(0.34, 1.56, 0.64, 1);">About Me</h2>
+            <div class="glass-card rounded-2xl p-8 mt-8" style="animation: slideInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/3" style="animation: slideInLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;">
+                        <ul class="space-y-4">
+                            <li class="flex items-center" style="animation: slideInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s both;">
+                                <i class="fas fa-user text-primary mr-3"></i>
+                                <span><strong>Name:</strong> EMAD MUSTAFA HAMAD</span>
+                            </li>
+                            <li class="flex items-center" style="animation: slideInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s both;">
+                                <i class="fas fa-birthday-cake text-primary mr-3"></i>
+                                <span><strong>Age:</strong> 22</span>
+                            </li>
+                            <li class="flex items-center" style="animation: slideInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.55s both;">
+                                <i class="fas fa-map-marker-alt text-primary mr-3"></i>
+                                <span><strong>Location:</strong> Kurdistan, Iraq</span>
+                            </li>
+                            <li class="flex items-center" style="animation: slideInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.65s both;">
+                                <i class="fas fa-graduation-cap text-primary mr-3"></i>
+                                <span><strong>Education:</strong> Software Engineering Student</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-2/3" style="animation: slideInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;">
+                        <h3 class="text-xl font-semibold mb-4 text-primary" style="animation: fadeInText 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s both;">Cybersecurity & Software Engineering</h3>
+                        <p class="mb-4 text-slate-300" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s both;">
+                            I'm passionate about cybersecurity, networking, Linux administration, and software development. My focus is on Security Operations Centers (SOC), Threat Detection, Incident Response, Blue Team operations, and Security Monitoring.
+                        </p>
+                        <p class="text-slate-300" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.55s both;">
+                            As a practical learner, I build real labs and environments to gain hands-on experience. My journey combines software engineering principles with cybersecurity practices to create secure and robust systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 gradient-text text-center">Technical Skills</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Cybersecurity Skills -->
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold mb-6 text-primary flex items-center">
+                        <i class="fas fa-shield-alt mr-2"></i> Cybersecurity
+                    </h3>
+                    <div id="cybersecurity-skills" class="space-y-4"></div>
+                </div>
+                
+                <!-- Networking Skills -->
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold mb-6 text-primary flex items-center">
+                        <i class="fas fa-network-wired mr-2"></i> Networking
+                    </h3>
+                    <div id="networking-skills" class="space-y-4"></div>
+                </div>
+                
+                <!-- Operating Systems -->
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold mb-6 text-primary flex items-center">
+                        <i class="fas fa-desktop mr-2"></i> Operating Systems
+                    </h3>
+                    <div id="os-skills" class="space-y-4"></div>
+                </div>
+                
+                <!-- Virtualization & Labs -->
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold mb-6 text-primary flex items-center">
+                        <i class="fas fa-server mr-2"></i> Virtualization & Labs
+                    </h3>
+                    <div id="virtualization-skills" class="space-y-4"></div>
+                </div>
+                
+                <!-- Programming -->
+                <div class="glass-card rounded-2xl p-6 md:col-span-2">
+                    <h3 class="text-xl font-semibold mb-6 text-primary flex items-center">
+                        <i class="fas fa-code mr-2"></i> Programming
+                    </h3>
+                    <div id="programming-skills" class="space-y-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 gradient-text text-center">Projects & Labs</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Projects will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cybersecurity Lab Section -->
+    <section id="lab" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 gradient-text text-center">Cybersecurity Lab</h2>
+            
+            <div class="glass-card rounded-2xl p-8">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-4 text-primary">Wazuh SIEM Home Lab</h3>
+                        <p class="text-slate-300 mb-6">
+                            A comprehensive security monitoring environment built with Wazuh SIEM, integrating endpoint security, log analysis, and threat detection capabilities.
+                        </p>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium text-slate-200 mb-2">Key Components:</h4>
+                                <ul class="list-disc list-inside text-slate-400 space-y-1">
+                                    <li>Wazuh Manager with Elastic Stack integration</li>
+                                    <li>Multiple agents across different operating systems</li>
+                                    <li>Custom rules for threat detection</li>
+                                    <li>Automated alerting and reporting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="rounded-xl overflow-hidden border border-slate-700">
+                            <img src="https://picsum.photos/800/500?random=201" alt="Wazuh SIEM Dashboard" class="w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Network Topology</h3>
+                    <div class="rounded-xl overflow-hidden border border-slate-700">
+                        <img src="https://picsum.photos/600/400?random=202" alt="Network Topology" class="w-full h-auto">
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Threat Hunting Examples</h3>
+                    <div class="rounded-xl overflow-hidden border border-slate-700">
+                        <img src="https://picsum.photos/600/400?random=203" alt="Threat Hunting" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Completed Courses Section -->
+    <section id="courses" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 gradient-text text-center" style="animation: fadeInText 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;">Completed Courses</h2>
+            
+            <div id="courses-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 gradient-text text-center">Learning Journey</h2>
+            
+            <div class="glass-card rounded-2xl p-8">
+                <div id="journey-items" class="space-y-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="glass-card rounded-2xl p-8" style="animation: slideInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1);">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="p-6" style="animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0s both;">
+                        <div class="text-4xl font-bold mb-2 gradient-text counter" data-target="15" style="animation: fadeInText 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;">0</div>
+                        <div class="text-slate-300" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both;">Labs Completed</div>
+                    </div>
+                    <div class="p-6" style="animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s both;">
+                        <div class="text-4xl font-bold mb-2 gradient-text counter" data-target="24" style="animation: fadeInText 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s both;">0</div>
+                        <div class="text-slate-300" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.55s both;">Projects Built</div>
+                    </div>
+                    <div class="p-6" style="animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;">
+                        <div class="text-4xl font-bold mb-2 gradient-text counter" data-target="32" style="animation: fadeInText 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;">0</div>
+                        <div class="text-slate-300" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.7s both;">Courses Completed</div>
+                    </div>
+                    <div class="p-6" style="animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s both;">
+                        <div class="text-4xl font-bold mb-2 gradient-text counter" data-target="1500" style="animation: fadeInText 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.65s both;">0</div>
+                        <div class="text-slate-300" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.85s both;">Hours of Practical Learning</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 gradient-text text-center" style="animation: slideInDown 1s cubic-bezier(0.34, 1.56, 0.64, 1);">Get In Touch</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2" style="animation: slideInLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;">
+                    <div class="glass-card rounded-2xl p-8 h-full" style="animation: slideInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;">
+                        <h3 class="text-xl font-semibold mb-6 text-primary" style="animation: fadeInText 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s both;">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s both;">
+                                <i class="fas fa-envelope text-primary mr-4 text-xl"></i>
+                                <span>contact@software.com</span>
+                            </div>
+                            <div class="flex items-center" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.55s both;">
+                                <i class="fab fa-linkedin text-primary mr-4 text-xl"></i>
+                                <a href="#" class="hover:text-primary transition-colors">linkedin.com/in/software</a>
+                            </div>
+                            <div class="flex items-center" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.65s both;">
+                                <i class="fab fa-github text-primary mr-4 text-xl"></i>
+                                <a href="#" class="hover:text-primary transition-colors">github.com/software</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2" style="animation: slideInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;">
+                    <div class="glass-card rounded-2xl p-8" style="animation: slideInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;">
+                        <h3 class="text-xl font-semibold mb-6 text-primary" style="animation: fadeInText 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s both;">Send Me a Message</h3>
+                        <form id="contact-form" class="space-y-4">
+                            <div style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both;">
+                                <label for="name" class="block text-slate-300 mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary transition-all" required>
+                            </div>
+                            <div style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both;">
+                                <label for="email" class="block text-slate-300 mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary transition-all" required>
+                            </div>
+                            <div style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s both;">
+                                <label for="message" class="block text-slate-300 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary transition-all" required></textarea>
+                            </div>
+                            <button type="submit" class="bg-primary hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 w-full" style="animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.7s both;">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#home" class="text-xl font-bold gradient-text">SOFTWARE</a>
+                    <p class="text-slate-400 mt-2">Cybersecurity Enthusiast | SOC Analyst Path | Software Engineering Student</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-primary transition-colors text-xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-primary transition-colors text-xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-primary transition-colors text-xl">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500">
+                <p>&copy; 2023 EMAD MUSTAFA HAMAD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data layer
+        const navigationItems = [
+            { "label": "Home", "href": "#home", "icon": "fas fa-home" },
+            { "label": "About", "href": "#about", "icon": "fas fa-user" },
+            { "label": "Skills", "href": "#skills", "icon": "fas fa-code" },
+            { "label": "Projects", "href": "#projects", "icon": "fas fa-project-diagram" },
+            { "label": "Lab", "href": "#lab", "icon": "fas fa-flask" },
+            { "label": "Courses", "href": "#courses", "icon": "fas fa-graduation-cap" },
+            { "label": "Journey", "href": "#experience", "icon": "fas fa-road" },
+            { "label": "Contact", "href": "#contact", "icon": "fas fa-envelope" }
+        ];
+
+        const typingTexts = [
+            "Cybersecurity Enthusiast",
+            "SOC Analyst Path",
+            "Software Engineering Student"
+        ];
+
+        const cybersecuritySkills = [
+            { "name": "Wazuh", "level": 85 },
+            { "name": "Splunk", "level": 80 },
+            { "name": "Sysmon", "level": 75 },
+            { "name": "SIEM Fundamentals", "level": 85 },
+            { "name": "Incident Response", "level": 80 },
+            { "name": "Threat Hunting", "level": 75 },
+            { "name": "Security Monitoring", "level": 85 },
+            { "name": "Log Analysis", "level": 80 }
+        ];
+
+        const networkingSkills = [
+            { "name": "TCP/IP", "level": 90 },
+            { "name": "VLANs", "level": 85 },
+            { "name": "Routing & Switching", "level": 80 },
+            { "name": "Network Troubleshooting", "level": 85 },
+            { "name": "pfSense", "level": 80 },
+            { "name": "CCNA Concepts", "level": 75 }
+        ];
+
+        const osSkills = [
+            { "name": "Linux Administration", "level": 90 },
+            { "name": "Red Hat Linux", "level": 85 },
+            { "name": "Fedora Linux", "level": 80 },
+            { "name": "Windows Administration", "level": 80 },
+            { "name": "Active Directory", "level": 75 }
+        ];
+
+        const virtualizationSkills = [
+            { "name": "Proxmox VE", "level": 85 },
+            { "name": "Virtual Machines", "level": 90 },
+            { "name": "Home Lab Design", "level": 80 },
+            { "name": "Network Segmentation", "level": 75 }
+        ];
+
+        const programmingSkills = [
+            { "name": "Java", "level": 85 },
+            { "name": "Python", "level": 80 },
+            { "name": "JavaScript", "level": 75 },
+            { "name": "Bash", "level": 85 },
+            { "name": "Software Development Fundamentals", "level": 85 }
+        ];
+
+        const projects = [
+            {
+                "title": "Wazuh SIEM Home Lab",
+                "description": "Implemented a comprehensive security monitoring environment with Wazuh SIEM, integrating endpoint security and log analysis.",
+                "technologies": ["Wazuh", "Elastic Stack", "Linux"],
+                "image": "https://picsum.photos/600/400?random=301",
+                "github": "#",
+                "demo": "#"
+            },
+            {
+                "title": "Active Directory Lab",
+                "description": "Built a Windows Server environment with Active Directory, Group Policy, and user management for security testing.",
+                "technologies": ["Windows Server", "Active Directory", "PowerShell"],
+                "image": "https://picsum.photos/600/400?random=302",
+                "github": "#",
+                "demo": "#"
+            },
+            {
+                "title": "Proxmox Virtualization Lab",
+                "description": "Created a virtualization environment with Proxmox VE hosting multiple VMs for network segmentation and security testing.",
+                "technologies": ["Proxmox VE", "KVM", "LXC"],
+                "image": "https://picsum.photos/600/400?random=303",
+                "github": "#",
+                "demo": "#"
+            },
+            {
+                "title": "VLAN Segmentation Project",
+                "description": "Designed and implemented VLAN segmentation for network security and traffic isolation in a lab environment.",
+                "technologies": ["pfSense", "VLANs", "802.1Q"],
+                "image": "https://picsum.photos/600/400?random=304",
+                "github": "#",
+                "demo": "#"
+            },
+            {
+                "title": "Linux Administration",
+                "description": "Developed automation scripts and security hardening for Linux servers in a multi-user environment.",
+                "technologies": ["Bash", "Ansible", "SSH"],
+                "image": "https://picsum.photos/600/400?random=305",
+                "github": "#",
+                "demo": "#"
+            },
+            {
+                "title": "SOC Monitoring Environment",
+                "description": "Built a SOC-like environment with security monitoring, alerting, and incident response workflows.",
+                "technologies": ["Wazuh", "Splunk", "ELK"],
+                "image": "https://picsum.photos/600/400?random=306",
+                "github": "#",
+                "demo": "#"
+            }
+        ];
+
+        const completedCourses = [
+            {
+                "title": "CCNA: Introduction to Networks",
+                "instructor": "Cisco Networking Academy",
+                "category": "Networking",
+                "hours": 40,
+                "skills": ["TCP/IP", "Routing", "Switching"],
+                "status": "Completed"
+            },
+            {
+                "title": "Red Hat System Administration I",
+                "instructor": "Red Hat",
+                "category": "Linux Administration",
+                "hours": 35,
+                "skills": ["Linux", "Server Management", "File Systems"],
+                "status": "Completed"
+            },
+            {
+                "title": "Splunk Fundamentals",
+                "instructor": "Splunk",
+                "category": "SIEM & Analytics",
+                "hours": 30,
+                "skills": ["Log Analysis", "Searching", "Dashboards"],
+                "status": "Completed"
+            },
+            {
+                "title": "Wazuh Certified Professional",
+                "instructor": "Wazuh",
+                "category": "Cybersecurity",
+                "hours": 45,
+                "skills": ["SIEM", "Threat Detection", "Incident Response"],
+                "status": "Completed"
+            },
+            {
+                "title": "Linux Fundamentals",
+                "instructor": "CompTIA",
+                "category": "Operating Systems",
+                "hours": 38,
+                "skills": ["Command Line", "System Administration", "Security"],
+                "status": "Completed"
+            },
+            {
+                "title": "Network Security Essentials",
+                "instructor": "Cisco",
+                "category": "Cybersecurity",
+                "hours": 42,
+                "skills": ["Firewalls", "VPN", "Intrusion Detection"],
+                "status": "Completed"
+            }
+        ];
+
+        const journey = [
+            {
+                "year": "2020",
+                "title": "Networking Foundations",
+                "description": "Started learning networking fundamentals including TCP/IP, subnetting, and basic network security."
+            },
+            {
+                "year": "2021",
+                "title": "Linux Administration",
+                "description": "Gained proficiency in Linux system administration, shell scripting, and server management."
+            },
+            {
+                "year": "2022",
+                "title": "Virtualization & Labs",
+                "description": "Built home lab with Proxmox VE, creating virtual networks and segmented environments."
+            },
+            {
+                "year": "2023",
+                "title": "Cybersecurity Focus",
+                "description": "Specialized in SOC operations, SIEM tools, threat hunting, and security monitoring."
+            }
+        ];
+
+        // Reusable render functions
+        function renderNavItems(items) {
+            return items.map(item => `
+                <li>
+                    <a href="${item.href}" class="text-slate-300 hover:text-primary transition-colors flex items-center">
+                        <i class="${item.icon} mr-2"></i> ${item.label}
+                    </a>
+                </li>
+            `).join("");
+        }
+
+        function renderSkillItems(skills) {
+            return skills.map((skill, index) => `
+                <div style="animation-delay: ${index * 0.15}s; animation: slideInLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;">
+                    <div class="flex justify-between mb-1">
+                        <span class="text-slate-300">${skill.name}</span>
+                        <span class="text-primary">${skill.level}%</span>
+                    </div>
+                    <div class="skill-bar" style="animation: slideInLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.15 + 0.2}s forwards;">
+                        <div class="skill-progress" style="width: ${skill.level}%; animation: scaleUp 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.15 + 0.5}s forwards;"></div>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        function renderProjectCards(projects) {
+            return projects.map((project, index) => `
+                <div class="project-card glass-card rounded-xl overflow-hidden transition-all duration-300" style="animation-delay: ${index * 0.2}s; animation: zoomIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;">
+                    <div class="h-48 overflow-hidden">
+                        <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">${project.title}</h3>
+                        <p class="text-slate-400 mb-4">${project.description}</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${project.technologies.map(tech => `<span class="text-xs bg-slate-800 text-primary px-2 py-1 rounded">${tech}</span>`).join("")}
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="${project.github}" class="text-sm bg-primary hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors">
+                                <i class="fab fa-github mr-1"></i> GitHub
+                            </a>
+                            <a href="${project.demo}" class="text-sm border border-primary text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-lg transition-colors">
+                                <i class="fas fa-external-link-alt mr-1"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        function renderTimelineItems(items) {
+            return items.map((item, index) => `
+                <div class="relative pl-8 md:pl-0 md:${index % 2 === 0 ? 'pr-8 md:text-right' : 'pl-8'} md:w-1/2 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}" style="animation: ${index % 2 === 0 ? 'slideInLeft' : 'slideInRight'} 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.2}s both;">
+                    <div class="glass-card rounded-xl p-6 timeline-item" style="animation: slideInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.2 + 0.2}s both;">
+                        <h3 class="text-xl font-semibold mb-1 text-primary" style="animation: fadeInText 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 0.2 + 0.4}s both;">${item.title}</h3>
+                        <div class="text-sm text-secondary mb-2" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.2 + 0.5}s both;">${item.issuer || item.year}</div>
+                        <p class="text-slate-400" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.2 + 0.6}s both;">${item.description}</p>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        function renderJourneyItems(items) {
+            return items.map((item, index) => `
+                <div class="flex" style="animation: slideInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.25}s both;">
+                    <div class="mr-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center animate-float" style="animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.25 + 0.1}s both;">
+                            <span class="font-bold">${item.year}</span>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold mb-1 text-primary" style="animation: fadeInText 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 0.25 + 0.2}s both;">${item.title}</h3>
+                        <p class="text-slate-400" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.25 + 0.35}s both;">${item.description}</p>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        function renderCourseCards(courses) {
+            return courses.map((course, index) => `
+                <div class="group glass-card rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 cursor-pointer" style="animation: slideInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.15}s both;">
+                    <div class="p-6 flex flex-col h-full">
+                        <!-- Header with Category Badge -->
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-primary mb-2 group-hover:text-cyan-300 transition-colors" style="animation: fadeInText 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 0.15 + 0.2}s both;">${course.title}</h3>
+                            </div>
+                            <div class="bg-primary/20 text-primary text-xs font-semibold px-3 py-1 rounded-full" style="animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.15 + 0.3}s both;">${course.category}</div>
+                        </div>
+
+                        <!-- Instructor -->
+                        <div class="flex items-center text-slate-400 text-sm mb-4" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.15 + 0.25}s both;">
+                            <i class="fas fa-user-tie mr-2 text-primary"></i>
+                            <span>${course.instructor}</span>
+                        </div>
+
+                        <!-- Hours -->
+                        <div class="flex items-center text-slate-400 text-sm mb-4" style="animation: floatUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.15 + 0.3}s both;">
+                            <i class="fas fa-clock mr-2 text-secondary"></i>
+                            <span>${course.hours} hours</span>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="w-full bg-slate-800 rounded-full h-2 mb-4 overflow-hidden" style="animation: slideInLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.15 + 0.35}s both;">
+                            <div class="h-full bg-gradient-to-r from-primary to-secondary" style="width: 100%; animation: scaleUp 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.15 + 0.5}s both;"></div>
+                        </div>
+
+                        <!-- Skills -->
+                        <div class="flex-1 mb-4">
+                            <p class="text-xs text-slate-400 mb-2">Skills Learned:</p>
+                            <div class="flex flex-wrap gap-2" style="animation: fadeIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.15 + 0.4}s both;">
+                                ${course.skills.map(skill => `<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded border border-primary/30 hover:bg-primary/20 transition-colors">${skill}</span>`).join("")}
+                            </div>
+                        </div>
+
+                        <!-- Status Badge -->
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
+                            <span class="text-xs font-semibold text-secondary flex items-center" style="animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.15 + 0.45}s both;">
+                                <i class="fas fa-check-circle mr-1"></i> ${course.status}
+                            </span>
+                            <i class="fas fa-arrow-right text-slate-400 group-hover:text-primary group-hover:translate-x-1 transition-all" style="animation: slideInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.15 + 0.5}s both;"></i>
+                        </div>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        // Initialize page
+        document.addEventListener("DOMContentLoaded", function() {
+            // Render navigation
+            document.getElementById("nav-list").innerHTML = renderNavItems(navigationItems);
+            document.getElementById("mobile-nav-list").innerHTML = renderNavItems(navigationItems);
+            
+            // Render skills
+            document.getElementById("cybersecurity-skills").innerHTML = renderSkillItems(cybersecuritySkills);
+            document.getElementById("networking-skills").innerHTML = renderSkillItems(networkingSkills);
+            document.getElementById("os-skills").innerHTML = renderSkillItems(osSkills);
+            document.getElementById("virtualization-skills").innerHTML = renderSkillItems(virtualizationSkills);
+            document.getElementById("programming-skills").innerHTML = renderSkillItems(programmingSkills);
+            
+            // Render projects
+            document.querySelector("#projects .grid").innerHTML = renderProjectCards(projects);
+            
+            // Render completed courses
+            document.getElementById("courses-grid").innerHTML = renderCourseCards(completedCourses);
+            
+            // Render journey
+            document.getElementById("journey-items").innerHTML = renderJourneyItems(journey);
+            
+            // Mobile menu toggle
+            document.getElementById("mobile-menu-button").addEventListener("click", function() {
+                document.getElementById("mobile-menu").classList.toggle("hidden");
+            });
+            
+            // Typing animation
+            let currentTextIndex = 0;
+            let currentCharIndex = 0;
+            let isDeleting = false;
+            const typingElement = document.getElementById("typing-text");
+            
+            function typeText() {
+                const currentText = typingTexts[currentTextIndex];
+                
+                if (isDeleting) {
+                    typingElement.textContent = currentText.substring(0, currentCharIndex - 1);
+                    currentCharIndex--;
+                    
+                    if (currentCharIndex === 0) {
+                        isDeleting = false;
+                        currentTextIndex = (currentTextIndex + 1) % typingTexts.length;
+                        setTimeout(typeText, 500);
+                    } else {
+                        setTimeout(typeText, 50);
+                    }
+                } else {
+                    typingElement.textContent = currentText.substring(0, currentCharIndex + 1);
+                    currentCharIndex++;
+                    
+                    if (currentCharIndex === currentText.length) {
+                        isDeleting = true;
+                        setTimeout(typeText, 2000);
+                    } else {
+                        setTimeout(typeText, 100);
+                    }
+                }
+            }
+            
+            // Start typing animation after 1 second
+            setTimeout(typeText, 1000);
+            
+            // Animate counters
+            function animateCounters() {
+                const counters = document.querySelectorAll(".counter");
+                const speed = 200;
+                
+                counters.forEach(counter => {
+                    const target = parseInt(counter.getAttribute("data-target"));
+                    const count = parseInt(counter.textContent);
+                    const increment = target / speed;
+                    
+                    if (count < target) {
+                        counter.textContent = Math.floor(count + increment);
+                        setTimeout(animateCounters, 1);
+                    } else {
+                        counter.textContent = target;
+                    }
+                });
+            }
+            
+            // Initialize particles.js
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": ["#0ea5e9", "#8b5cf6", "#06b6d4"]
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.3,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 2,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#0ea5e9",
+                        "opacity": 0.2,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 1,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 0.5
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+            
+            // Form validation
+            document.getElementById("contact-form").addEventListener("submit", function(e) {
+                e.preventDefault();
+                
+                // Simple validation
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const message = document.getElementById("message").value.trim();
+                
+                if (name && email && message) {
+                    // In a real implementation, you would send the form data to a server
+                    alert("Message sent successfully!");
+                    this.reset();
+                } else {
+                    alert("Please fill in all fields.");
+                }
+            });
+            
+            // Animate counters when page loads
+            window.addEventListener("load", function() {
+                setTimeout(animateCounters, 500);
+            });
+            
+            // Smooth scrolling for anchor links
+            document.addEventListener("click", function(e) {
+                if (e.target.closest("a[href^='#']")) {
+                    e.preventDefault();
+                    const target = document.querySelector(e.target.closest("a").getAttribute("href"));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: "smooth"
+                        });
+                        
+                        // Close mobile menu if open
+                        if (!document.getElementById("mobile-menu").classList.contains("hidden")) {
+                            document.getElementById("mobile-menu").classList.add("hidden");
+                        }
+                    }
+                }
+            });
+            
+            // Premium Intersection Observer for scroll-triggered animations with parallax
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const animationObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Reset animation by removing and re-adding the animation style
+                        const element = entry.target;
+                        element.style.opacity = '1';
+                        element.style.pointerEvents = 'auto';
+                        
+                        // For parallax effect on images
+                        if (element.tagName === 'IMG') {
+                            element.style.willChange = 'transform';
+                            window.addEventListener('scroll', () => {
+                                const scrollPos = window.scrollY;
+                                const elementPos = element.getBoundingClientRect().top + scrollPos;
+                                const distance = scrollPos - (elementPos - window.innerHeight);
+                                const parallax = distance * 0.1;
+                                element.style.transform = `translateY(${parallax}px)`;
+                            }, { passive: true });
+                        }
+                    } else {
+                        entry.target.style.opacity = '0';
+                        entry.target.style.pointerEvents = 'none';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all animatable elements
+            document.querySelectorAll('h1, h2, h3, p, li, .glass-card, .project-card, .skill-bar, .journey-item, .stat-card, button, a, input, textarea, img').forEach(el => {
+                animationObserver.observe(el);
+            });
+            
+            // Premium page load animation sequence
+            window.addEventListener('load', () => {
+                // Stagger animations on page load
+                const heroElement = document.querySelector('.hero-content');
+                const navElement = document.querySelector('nav');
+                
+                if (navElement) {
+                    navElement.style.animation = 'slideInDown 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards';
+                }
+                
+                // Reset all section animations on page load
+                document.querySelectorAll('section').forEach((section, index) => {
+                    section.style.animation = `fadeIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.1}s forwards`;
+                });
+            });
+            
+            // Replay animations on element re-entry
+            window.addEventListener('scroll', () => {
+                document.querySelectorAll('[style*="animation:"]').forEach(el => {
+                    if (el.getBoundingClientRect().top < window.innerHeight && el.getBoundingClientRect().bottom > 0) {
+                        // Element is in viewport - keep it visible
+                        el.style.opacity = '1';
+                    }
+                });
+            }, { passive: true });
+        });
+    </script>
+</body>
+</html>
